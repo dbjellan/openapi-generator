@@ -43,6 +43,7 @@ apply plugin: 'kotlin'
 apply plugin: "org.gradle.kotlin.kotlin-dsl"
 apply plugin: 'io.codearte.nexus-staging'
 apply plugin: "de.marcphilipp.nexus-publish"
+apply plugin: 'maven'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
