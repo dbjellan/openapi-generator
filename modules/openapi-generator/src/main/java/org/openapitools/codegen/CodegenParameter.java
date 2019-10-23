@@ -97,6 +97,11 @@ public class CodegenParameter {
      */
     public Number multipleOf;
 
+    /**
+     * Whether parameter is for authorization (to allow templates to skip so can be added at lower level
+     */
+    public boolean isAuthorization;
+
     public CodegenParameter copy() {
         CodegenParameter output = new CodegenParameter();
         output.isFile = this.isFile;

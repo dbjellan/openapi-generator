@@ -72,6 +72,10 @@ import static org.openapitools.codegen.utils.StringUtils.*;
 
 public class DefaultCodegen implements CodegenConfig {
     private static final Logger LOGGER = LoggerFactory.getLogger(DefaultCodegen.class);
+    private static final List<String> authorizationParameterNames = new ArrayList<String>(){{
+        add("Authorization");
+        add("authorization");
+    }};
 
     protected GeneratorMetadata generatorMetadata;
     protected String inputSpec;
@@ -504,8 +508,8 @@ public class DefaultCodegen implements CodegenConfig {
     }
 
     // override to post-process any parameters
-    @SuppressWarnings("unused")
     public void postProcessParameter(CodegenParameter parameter) {
+        parameter.isAuthorization = (authorizationParameterNames.indexOf(parameter.paramName) != -1);
     }
 
     //override with any special handling of the entire OpenAPI spec document
