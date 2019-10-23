@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>openapi-generator-gradle-plugin-mvn-wrapper</artifactId>
+    <artifactId>openapi-generator-gradle-plugin</artifactId>
     <packaging>pom</packaging>
     <name>openapi-generator-gradle-plugin (maven wrapper)</name>
     <description>This is a maven wrapper to call gradle during installation phase</description>
