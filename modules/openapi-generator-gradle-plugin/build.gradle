@@ -12,6 +12,9 @@ buildscript {
         maven {
             url "https://oss.sonatype.org/content/repositories/snapshots/"
         }
+        maven {
+            url 'https://jitpack.io'
+        }
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -54,12 +57,16 @@ repositories {
     maven {
         url "https://oss.sonatype.org/content/repositories/snapshots/"
     }
+    maven {
+        url 'https://jitpack.io'
+    }
 }
 
 dependencies {
     compile gradleApi()
     // Shared OpenAPI Generator version be passed via command line arg as -PopenApiGeneratorVersion=VERSION
-    compile "org.openapitools:openapi-generator:$openApiGeneratorVersion"
+    //compile "org.openapitools:openapi-generator:$openApiGeneratorVersion"
+    compile 'com.github.dbjellan.openapi-generator:openapi-generator:d77f3c1304'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 
     testCompile 'org.testng:testng:6.9.6',
